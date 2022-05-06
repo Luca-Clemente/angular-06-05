@@ -4,13 +4,13 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
-import { GithubService } from './github.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { BitcoinService } from './bitcoin.service';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, HttpClientModule ],
   declarations: [ AppComponent, HelloComponent ],
   bootstrap:    [ AppComponent ],
-  providers: [GithubService]
+  providers: [BitcoinService]
 })
 export class AppModule { }

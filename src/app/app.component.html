@@ -1,25 +1,20 @@
-<h2>GitHub Clemente's repos</h2>
-<table border="1">
-  <tr>
-    <th>ID</th>
-    <th>Name</th>
-  </tr>
-  <tr *ngFor="let repo of gitHubService.repos">
-    <td>
-      {{ repo.id }}
-    </td>
-    <td>
-      {{ repo.full_name }}
-    </td>
-  </tr>
-</table>
+<h1>Cabeçalho</h1>
+<hr>
+<p>Nome - Luca Clemente dos Santos Cruz</p>
+<p>RA - 	0050832011018</p>
+
+<h2>Bitcoin Rates</h2>
 <hr />
-<h2>Bitcoins</h2>
-<button>Atualizar</button>
+<button (click)="updateBitcoinRates()">Atualizar</button>
 <table border="1">
   <tr>
     <th>Data/hora</th>
     <th>USD</th>
     <th>EUR</th>
+  </tr>
+  <tr *ngFor="let rate of this.bitcoinService.list">
+    <td>{{rate.time.updated}}</td>
+    <td>{{rate.bpi.USD.rate_float}}</td>
+    <td>{{rate.bpi.BRL.rate_float}}</td>
   </tr>
 </table>
