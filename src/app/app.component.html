@@ -18,3 +18,8 @@
     <td>{{rate.bpi.BRL.rate_float}}</td>
   </tr>
 </table>
+
+<h3>Temporizador</h3>
+{{timer.getCount()}}s
+<button (click)="timer.start(1000)">Iniciar</button>
+<button (click)="timer.stop()">Parar</button>
